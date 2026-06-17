@@ -1,4 +1,17 @@
-const h1 = document.querySelector('h1');
-const colorInput = document.querySelector('.color-input');
-console.log(colorInput)
-// h1.style.backgroundColor=colorInput.value;
+const form = document.querySelector("form");
+const colorInput = document.querySelector(".color-input");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const color = colorInput.value.trim();
+
+  if (color === "") {
+    alert("Please enter a color!");
+    return;
+  }
+
+  document.body.style.backgroundColor = color;
+
+  colorInput.value = "";
+});

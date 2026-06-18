@@ -15,3 +15,5 @@ form.addEventListener("submit", (e) => {
 
   colorInput.value = "";
 });
+
+console.log("Script loaded successfully!");
